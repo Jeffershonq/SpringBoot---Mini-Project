@@ -7,4 +7,6 @@ import java.util.List;
 public interface StudentSerive {
     public Student saveStudent(Student student);
     public List<Student> getAllStudents();
+
+    void deleteStudent(long id);
 }

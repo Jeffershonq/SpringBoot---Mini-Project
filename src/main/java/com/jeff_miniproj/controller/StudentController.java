@@ -24,4 +24,10 @@ public class StudentController {
     public List<Student> getAllStudents(){
         return studentSerive.getAllStudents();
     }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable Long id) {
+        studentSerive.deleteStudent(id);
+        return "Student with id " + id + " is deleted";
+    }
 }
